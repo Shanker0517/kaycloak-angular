@@ -12,11 +12,11 @@ import { KeycloakProfile } from 'keycloak-js';
 })
 export class ProfileComponent implements OnInit {
   agentProfile: KeycloakProfile | undefined;
-  constructor(private keyClockService: KeycloakService) {}
+  constructor(private keyCloakService: KeycloakService) {}
   ngOnInit(): void {
     this.getUserProfile();
   }
   async getUserProfile() {
-    this.agentProfile = await this.keyClockService.getUserProfile();
+    this.agentProfile = await this.keyCloakService.getUserProfile();
   }
 }
